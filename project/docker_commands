@@ -1,11 +1,43 @@
-## Docker commands used to build the application 
-# TODO: insert the docker build command
+## Docker commands used to build the application
+
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+
+docker run --name techtrends -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+
+docker logs techtrends
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+
+- Serving Flask app 'app' (lazy loading)
+- Environment: production
+  WARNING: This is a development server. Do not use it in a production deployment.
+  Use a production WSGI server instead.
+- Debug mode: off
+  WARNING:werkzeug:2023-05-04 08:12:19,377, _ Running on all addresses.
+  WARNING: This is a development server. Do not use it in a production deployment.
+  INFO:werkzeug:2023-05-04 08:12:19,387, _ Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+  INFO:werkzeug:2023-05-04 08:12:36,098, 172.17.0.1 - - [04/May/2023 08:12:36] "GET / HTTP/1.1" 200 -
+  INFO:werkzeug:2023-05-04 08:12:36,203, 172.17.0.1 - - [04/May/2023 08:12:36] "GET /static/css/main.css HTTP/1.1" 304 -
+  INFO:app:2023-05-04 08:12:37,368, Article 2020 CNCF Annual Report is retrieved!
+  INFO:werkzeug:2023-05-04 08:12:37,407, 172.17.0.1 - - [04/May/2023 08:12:37] "GET /1 HTTP/1.1" 200 -
+  INFO:werkzeug:2023-05-04 08:12:37,452, 172.17.0.1 - - [04/May/2023 08:12:37] "GET /static/css/main.css HTTP/1.1" 304 -
+  ERROR:app:2023-05-04 08:12:39,113, About Us page is retrieved
+  INFO:werkzeug:2023-05-04 08:12:39,117, 172.17.0.1 - - [04/May/2023 08:12:39] "GET /about HTTP/1.1" 200 -
+  INFO:werkzeug:2023-05-04 08:12:39,165, 172.17.0.1 - - [04/May/2023 08:12:39] "GET /static/css/main.css HTTP/1.1" 304 -
+  INFO:werkzeug:2023-05-04 08:12:41,276, 172.17.0.1 - - [04/May/2023 08:12:41] "GET /create HTTP/1.1" 200 -
+  INFO:werkzeug:2023-05-04 08:12:41,298, 172.17.0.1 - - [04/May/2023 08:12:41] "GET /static/css/main.css HTTP/1.1" 304 -
+  INFO:app:2023-05-04 08:12:52,156, Article Cloud Native Uda is created
+  INFO:werkzeug:2023-05-04 08:12:52,157, 172.17.0.1 - - [04/May/2023 08:12:52] "POST /create HTTP/1.1" 302 -
+  INFO:werkzeug:2023-05-04 08:12:52,173, 172.17.0.1 - - [04/May/2023 08:12:52] "GET / HTTP/1.1" 200 -
+  INFO:werkzeug:2023-05-04 08:12:52,342, 172.17.0.1 - - [04/May/2023 08:12:52] "GET /static/css/main.css HTTP/1.1" 304 -
+  INFO:app:2023-05-04 08:12:54,576, Article Cloud Native Uda is retrieved!
+  INFO:werkzeug:2023-05-04 08:12:54,592, 172.17.0.1 - - [04/May/2023 08:12:54] "GET /7 HTTP/1.1" 200 -
+  INFO:werkzeug:2023-05-04 08:12:54,680, 172.17.0.1 - - [04/May/2023 08:12:54] "GET /static/css/main.css HTTP/1.1" 304 -
+  INFO:app:2023-05-04 08:13:03,255, Healthcheck request successfull
+  INFO:werkzeug:2023-05-04 08:13:03,258, 172.17.0.1 - - [04/May/2023 08:13:03] "GET /healthz HTTP/1.1" 200 -
+  INFO:app:2023-05-04 08:13:07,515, Metrics request successfull
+  INFO:werkzeug:2023-05-04 08:13:07,518, 172.17.0.1 - - [04/May/2023 08:13:07] "GET /metrics HTTP/1.1" 200 -
